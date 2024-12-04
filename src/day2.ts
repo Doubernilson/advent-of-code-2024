@@ -43,9 +43,7 @@ function countSafeReports(
 
 const text = await readFileFromPath("./src/inputs/day2.txt");
 
-const reports = text
-  .split("\n")
-  .map((value) => value.split(" ").map((value) => +value));
+const reports = text.split("\n").map((value) => value.split(" ").map(Number));
 
 console.log(countSafeReports(reports));
 
